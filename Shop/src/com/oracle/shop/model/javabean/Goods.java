@@ -12,9 +12,9 @@ public class Goods implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Goods [goodsid=" + goodsid + ", goodsname=" + goodsname
-				+ ", goodstype=" + goodstype + ", goodsprice=" + goodsprice
-				+ ", goodsnumber=" + goodsnumber + ", goodspic=" + goodspic
+		return "Goods [goods_id=" + goods_id + ", gname=" + gname
+				+ ", type=" + type + ", price=" + price
+				+ ", sum=" + sum + ", image=" + image
 				+ "]";
 	}
 
@@ -22,22 +22,22 @@ public class Goods implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/** 商品编号. */
-	private Integer goodsid;
+	private Integer goods_id;
 
 	/** 商品名称. */
-	private String goodsname;
+	private String gname;
 
 	/** 商品类型. */
-	private String goodstype;
+	private String type;
 
 	/** 商品价格. */
-	private Double goodsprice;
+	private Double price;
 
 	/** 商品数量. */
-	private Integer goodsnumber;
+	private Integer sum;
 
 	/** 商品图片. */
-	private String goodspic;
+	private String image;
 
 	/**
 	 * 僐儞僗僩儔僋僞.
@@ -48,11 +48,11 @@ public class Goods implements Serializable {
 	/**
 	 * 商品编号 傪愝掕偟傑偡.
 	 * 
-	 * @param goodsid
+	 * @param goods_id
 	 *            商品编号
 	 */
-	public void setGoodsid(Integer goodsid) {
-		this.goodsid = goodsid;
+	public void setgoods_id(Integer goods_id) {
+		this.goods_id = goods_id;
 	}
 
 	/**
@@ -60,18 +60,18 @@ public class Goods implements Serializable {
 	 * 
 	 * @return 商品编号
 	 */
-	public Integer getGoodsid() {
-		return this.goodsid;
+	public Integer getgoods_id() {
+		return this.goods_id;
 	}
 
 	/**
 	 * 商品名称 傪愝掕偟傑偡.
 	 * 
-	 * @param goodsname
+	 * @param gname
 	 *            商品名称
 	 */
-	public void setGoodsname(String goodsname) {
-		this.goodsname = goodsname;
+	public void setgname(String gname) {
+		this.gname = gname;
 	}
 
 	/**
@@ -79,18 +79,18 @@ public class Goods implements Serializable {
 	 * 
 	 * @return 商品名称
 	 */
-	public String getGoodsname() {
-		return this.goodsname;
+	public String getgname() {
+		return this.gname;
 	}
 
 	/**
 	 * 商品类型 傪愝掕偟傑偡.
 	 * 
-	 * @param goodstype
+	 * @param type
 	 *            商品类型
 	 */
-	public void setGoodstype(String goodstype) {
-		this.goodstype = goodstype;
+	public void settype(String type) {
+		this.type = type;
 	}
 
 	/**
@@ -98,18 +98,18 @@ public class Goods implements Serializable {
 	 * 
 	 * @return 商品类型
 	 */
-	public String getGoodstype() {
-		return this.goodstype;
+	public String gettype() {
+		return this.type;
 	}
 
 	/**
 	 * 商品价格 傪愝掕偟傑偡.
 	 * 
-	 * @param goodsprice
+	 * @param price
 	 *            商品价格
 	 */
-	public void setGoodsprice(Double goodsprice) {
-		this.goodsprice = goodsprice;
+	public void setprice(Double price) {
+		this.price = price;
 	}
 
 	/**
@@ -117,18 +117,18 @@ public class Goods implements Serializable {
 	 * 
 	 * @return 商品价格
 	 */
-	public Double getGoodsprice() {
-		return this.goodsprice;
+	public Double getprice() {
+		return this.price;
 	}
 
 	/**
 	 * 商品数量 傪愝掕偟傑偡.
 	 * 
-	 * @param goodsnumber
+	 * @param sum
 	 *            商品数量
 	 */
-	public void setGoodsnumber(Integer goodsnumber) {
-		this.goodsnumber = goodsnumber;
+	public void setsum(Integer sum) {
+		this.sum = sum;
 	}
 
 	/**
@@ -136,18 +136,18 @@ public class Goods implements Serializable {
 	 * 
 	 * @return 商品数量
 	 */
-	public Integer getGoodsnumber() {
-		return this.goodsnumber;
+	public Integer getsum() {
+		return this.sum;
 	}
 
 	/**
 	 * 商品图片 傪愝掕偟傑偡.
 	 * 
-	 * @param goodspic
+	 * @param image
 	 *            商品图片
 	 */
-	public void setGoodspic(String goodspic) {
-		this.goodspic = goodspic;
+	public void setimage(String image) {
+		this.image = image;
 	}
 
 	/**
@@ -155,8 +155,8 @@ public class Goods implements Serializable {
 	 * 
 	 * @return 商品图片
 	 */
-	public String getGoodspic() {
-		return this.goodspic;
+	public String getimage() {
+		return this.image;
 	}
 
 	/**
@@ -166,7 +166,7 @@ public class Goods implements Serializable {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((goodsid == null) ? 0 : goodsid.hashCode());
+		result = prime * result + ((goods_id == null) ? 0 : goods_id.hashCode());
 
 		return result;
 	}
@@ -186,11 +186,11 @@ public class Goods implements Serializable {
 			return false;
 		}
 		Goods other = (Goods) obj;
-		if (goodsid == null) {
-			if (other.goodsid != null) {
+		if (goods_id == null) {
+			if (other.goods_id != null) {
 				return false;
 			}
-		} else if (!goodsid.equals(other.goodsid)) {
+		} else if (!goods_id.equals(other.goods_id)) {
 			return false;
 		}
 

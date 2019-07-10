@@ -12,7 +12,7 @@ public class Users implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Users [userid=" + userid + ", username=" + username
+		return "Users [users_id=" + users_id + ", username=" + username
 				+ ", password=" + password + ", secondname=" + secondname + "]";
 	}
 
@@ -20,7 +20,7 @@ public class Users implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/** 用户编号. */
-	private Integer userid;
+	private Integer users_id;
 
 	/** 用户名. */
 	private String username;
@@ -53,7 +53,7 @@ public class Users implements Serializable {
 	 *            用户编号
 	 */
 	public void setUserid(Integer userid) {
-		this.userid = userid;
+		this.users_id = userid;
 	}
 
 	/**
@@ -61,8 +61,8 @@ public class Users implements Serializable {
 	 * 
 	 * @return 用户编号
 	 */
-	public Integer getUserid() {
-		return this.userid;
+	public Integer getusers_id() {
+		return this.users_id;
 	}
 
 	/**
@@ -185,7 +185,7 @@ public class Users implements Serializable {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((userid == null) ? 0 : userid.hashCode());
+		result = prime * result + ((users_id == null) ? 0 : users_id.hashCode());
 
 		return result;
 	}
@@ -205,15 +205,17 @@ public class Users implements Serializable {
 			return false;
 		}
 		Users other = (Users) obj;
-		if (userid == null) {
-			if (other.userid != null) {
+		if (users_id == null) {
+			if (other.users_id != null) {
 				return false;
 			}
-		} else if (!userid.equals(other.userid)) {
+		} else if (!users_id.equals(other.users_id)) {
 			return false;
 		}
 
 		return true;
 	}
+
+	
 
 }
